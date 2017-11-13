@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div id="maincontent">
+<h1>HTML5 Input 类型</h1>
+<div id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="/html5/html_5_serversentevents.asp" title="HTML5 服务器发送事件">HTML5 服务器发送事件</a></li>
+<li class="next"><a href="/html5/html_5_form_elements.asp" title="HTML5 表单元素">HTML5 表单元素</a></li>
+</ul>
+</div>
+<div>
+<h2>HTML5 新的 Input 类型</h2>
+<p>HTML5 拥有多个新的表单输入类型。这些新特性提供了更好的输入控制和验证。</p>
+<p>本章全面介绍这些新的输入类型：</p>
+<ul>
+<li>email</li>
+<li>url</li>
+<li>number</li>
+<li>range</li>
+<li>Date pickers (date, month, week, time, datetime, datetime-local)</li>
+<li>search</li>
+<li>color</li>
+</ul>
+</div>
+<div>
+<h2>浏览器支持</h2>
+<table class="dataintable">
+<tr>
+<th style="width:25%;">Input type</th>
+<th style="width:15%;">IE</th>
+<th style="width:15%;">Firefox</th>
+<th style="width:15%;">Opera</th>
+<th style="width:15%;">Chrome</th>
+<th style="width:15%;">Safari</th>
+</tr>
+<tr>
+<td>email</td>
+<td><span class="marked">No</span></td>
+<td><span>4.0</span></td>
+<td>9.0</td>
+<td><span>10.0</span></td>
+<td><span class="marked">No</span></td>
+</tr>
+<tr>
+<td>url</td>
+<td><span class="marked">No</span></td>
+<td><span>4.0</span></td>
+<td>9.0</td>
+<td><span>10.0</span></td>
+<td><span class="marked">No</span></td>
+</tr>
+<tr>
+<td>number</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td>9.0</td>
+<td><span>7.0</span></td>
+<td><span class="marked">No</span></td>
+</tr>
+<tr>
+<td>range</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td>9.0</td>
+<td>4.0</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>Date pickers</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td>9.0</td>
+<td><span>10.0</span></td>
+<td><span class="marked">No</span></td>
+</tr>
+<tr>
+<td>search</td>
+<td><span class="marked">No</span></td>
+<td><span>4.0</span></td>
+<td><span>11.0</span></td>
+<td><span>10.0</span></td>
+<td><span class="marked">No</span></td>
+</tr>
+<tr>
+<td>color</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td><span>11.0</span></td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+</tr>
+</table>
+<p class="note"><span>注释：</span>Opera 对新的输入类型的支持最好。不过您已经可以在所有主流的浏览器中使用它们了。即使不被支持，仍然可以显示为常规的文本域。</p>
+</div>
+<div>
+<h2>Input 类型 - email</h2>
+<p>email 类型用于应该包含 e-mail 地址的输入域。</p>
+<p>在提交表单时，会自动验证 email 域的值。</p>
+<h3>实例</h3>
+<pre>E-mail: &lt;input <code>type="email"</code> name="user_email" /&gt;</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_email" target="_blank">亲自试一试</a></p>
+<p class="tip"><span>提示：</span>iPhone 中的 Safari 浏览器支持 email 输入类型，并通过改变触摸屏键盘来配合它（添加 @ 和 .com 选项）。</p>
+</div>
+<div>
+<h2>Input 类型 - url</h2>
+<p>url 类型用于应该包含 URL 地址的输入域。</p>
+<p>在提交表单时，会自动验证 url 域的值。</p>
+<h3>实例</h3>
+<pre>Homepage: &lt;input <code>type="url"</code> name="user_url" /&gt;</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_url" target="_blank">亲自试一试</a></p>
+<p class="tip"><span>提示：</span>iPhone 中的 Safari 浏览器支持 url 输入类型，并通过改变触摸屏键盘来配合它（添加 .com 选项）。</p>
+</div>
+<div>
+<h2>Input 类型 - number</h2>
+<p>number 类型用于应该包含数值的输入域。</p>
+<p>您还能够设定对所接受的数字的限定：</p>
+<h3>实例</h3>
+<pre>Points: &lt;input <code>type="number"</code> name="points" min="1" max="10" /&gt;</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_number" target="_blank">亲自试一试</a></p>
+<p>请使用下面的属性来规定对数字类型的限定：</p>
+<table class="dataintable">
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+<tr>
+<td>max</td>
+<td><i>number</i></td>
+<td>规定允许的最大值</td>
+</tr>
+<tr>
+<td>min</td>
+<td><i>number</i></td>
+<td>规定允许的最小值</td>
+</tr>
+<tr>
+<td>step</td>
+<td><i>number</i></td>
+<td>规定合法的数字间隔（如果 step="3"，则合法的数是 -3,0,3,6 等）</td>
+</tr>
+<tr>
+<td>value</td>
+<td><i>number</i></td>
+<td>规定默认值</td>
+</tr>
+</table>
+<p>请试一下带有所有限定属性的例子：<a href="/tiy/t.asp?f=html5_form_number_adv" target="_blank">亲自试一试</a></p>
+<p class="tip"><span>提示：</span>iPhone 中的 Safari 浏览器支持 number 输入类型，并通过改变触摸屏键盘来配合它（显示数字）。</p>
+</div>
+<div>
+<h2>Input 类型 - range</h2>
+<p>range 类型用于应该包含一定范围内数字值的输入域。</p>
+<p>range 类型显示为滑动条。</p>
+<p>您还能够设定对所接受的数字的限定：</p>
+<h3>实例</h3>
+<pre>&lt;input <code>type="range"</code> name="points" min="1" max="10" /&gt;</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_range" target="_blank">亲自试一试</a></p>
+<p>请使用下面的属性来规定对数字类型的限定：</p>
+<table class="dataintable">
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+<tr>
+<td>max</td>
+<td><i>number</i></td>
+<td>规定允许的最大值</td>
+</tr>
+<tr>
+<td>min</td>
+<td><i>number</i></td>
+<td>规定允许的最小值</td>
+</tr>
+<tr>
+<td>step</td>
+<td><i>number</i></td>
+<td>规定合法的数字间隔（如果 step="3"，则合法的数是 -3,0,3,6 等）</td>
+</tr>
+<tr>
+<td>value</td>
+<td><i>number</i></td>
+<td>规定默认值</td>
+</tr>
+</table>
+</div>
+<div>
+<h2>Input 类型 - Date Pickers（日期选择器）</h2>
+<p>HTML5 拥有多个可供选取日期和时间的新输入类型：</p>
+<ul>
+<li>date - 选取日、月、年</li>
+<li>month - 选取月、年</li>
+<li>week - 选取周和年</li>
+<li>time - 选取时间（小时和分钟）</li>
+<li>datetime - 选取时间、日、月、年（UTC 时间）</li>
+<li>datetime-local - 选取时间、日、月、年（本地时间）</li>
+</ul>
+<p>下面的例子允许您从日历中选取一个日期：</p>
+<h3>实例</h3>
+<pre>Date: &lt;input <code>type="date"</code> name="user_date" /&gt;</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_date" target="_blank">亲自试一试</a></p>
+<p>输入类型 "month": <a href="/tiy/t.asp?f=html5_form_month" target="_blank">亲自试一试</a></p>
+<p>输入类型 "week": <a href="/tiy/t.asp?f=html5_form_week" target="_blank">亲自试一试</a></p>
+<p>输入类型 "time": <a href="/tiy/t.asp?f=html5_form_time" target="_blank">亲自试一试</a></p>
+<p>输入类型 "datetime": <a href="/tiy/t.asp?f=html5_form_datetime" target="_blank">亲自试一试</a></p>
+<p>输入类型 "datetime-local": <a href="/tiy/t.asp?f=html5_form_datetime-local" target="_blank">亲自试一试</a></p>
+</div>
+<div>
+<h2>Input 类型 - search</h2>
+<p>search 类型用于搜索域，比如站点搜索或 Google 搜索。</p>
+<p>search 域显示为常规的文本域。</p>
+</div>
+<div id="bpn">
+<ul class="prenext">
+<li class="pre"><a href="/html5/html_5_serversentevents.asp" title="HTML5 服务器发送事件">HTML5 服务器发送事件</a></li>
+<li class="next"><a href="/html5/html_5_form_elements.asp" title="HTML5 表单元素">HTML5 表单元素</a></li>
+</ul>
+</div>
+</div>
+</body>
+</html>

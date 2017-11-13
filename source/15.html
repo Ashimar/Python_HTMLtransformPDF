@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div id="maincontent">
+<h1>HTML5 表单元素</h1>
+<div id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="/html5/html_5_form_input_types.asp" title="HTML5 Input 类型">HTML5 输入类型</a></li>
+<li class="next"><a href="/html5/html_5_form_attributes.asp" title="HTML5 表单属性">HTML5 表单属性</a></li>
+</ul>
+</div>
+<div>
+<h2>HTML5 的新的表单元素：</h2>
+<p>HTML5 拥有若干涉及表单的元素和属性。</p>
+<p>本章介绍以下新的表单元素：</p>
+<ul>
+<li>datalist</li>
+<li>keygen</li>
+<li>output</li>
+</ul>
+</div>
+<div>
+<h2>浏览器支持</h2>
+<table class="dataintable">
+<tr>
+<th style="width:25%;">Input type</th>
+<th style="width:15%;">IE</th>
+<th style="width:15%;">Firefox</th>
+<th style="width:15%;">Opera</th>
+<th style="width:15%;">Chrome</th>
+<th style="width:15%;">Safari</th>
+</tr>
+<tr>
+<td>datalist</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td>9.5</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+</tr>
+<tr>
+<td>keygen</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td>10.5</td>
+<td>3.0</td>
+<td><span class="marked">No</span></td>
+</tr>
+<tr>
+<td>output</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td>9.5</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+</tr>
+</table>
+</div>
+<div>
+<h2>datalist 元素</h2>
+<p>datalist 元素规定输入域的选项列表。</p>
+<p>列表是通过 datalist 内的 option 元素创建的。</p>
+<p>如需把 datalist 绑定到输入域，请用输入域的 list 属性引用 datalist 的 id：</p>
+<h3>实例</h3>
+<pre>
+Webpage: &lt;input type="url" <span class="marked">list="url_list"</span> name="link" /&gt;
+<code>&lt;datalist id="url_list"&gt;</code>
+&lt;option label="W3School" value="http://www.W3School.com.cn" /&gt;
+&lt;option label="Google" value="http://www.google.com" /&gt;
+&lt;option label="Microsoft" value="http://www.microsoft.com" /&gt;
+<code>&lt;/datalist&gt;</code>
+</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_datalist" target="_blank">亲自试一试</a></p>
+<p class="tip"><span>提示：</span>option 元素永远都要设置 value 属性。</p>
+</div>
+<div>
+<h2>keygen 元素</h2>
+<p>keygen 元素的作用是提供一种验证用户的可靠方法。</p>
+<p>keygen 元素是密钥对生成器（key-pair generator）。当提交表单时，会生成两个键，一个是私钥，一个公钥。</p>
+<p>私钥（private key）存储于客户端，公钥（public key）则被发送到服务器。公钥可用于之后验证用户的客户端证书（client certificate）。</p>
+<p>目前，浏览器对此元素的糟糕的支持度不足以使其成为一种有用的安全标准。</p>
+<h3>实例</h3>
+<pre>
+&lt;form action="demo_form.asp" method="get"&gt;
+Username: &lt;input type="text" name="usr_name" /&gt;
+Encryption: <code>&lt;keygen name="security" /&gt;</code>
+&lt;input type="submit" /&gt;
+&lt;/form&gt;
+</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_keygen" target="_blank">亲自试一试</a></p>
+</div>
+<div>
+<h2>output 元素</h2>
+<p>output 元素用于不同类型的输出，比如计算或脚本输出：</p>
+<h3>实例</h3>
+<pre>&lt;output id="result" onforminput="resCalc()"&gt;&lt;/output&gt;</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_output" target="_blank">亲自试一试</a></p>
+</div>
+<div id="bpn">
+<ul class="prenext">
+<li class="pre"><a href="/html5/html_5_form_input_types.asp" title="HTML5 Input 类型">HTML5 输入类型</a></li>
+<li class="next"><a href="/html5/html_5_form_attributes.asp" title="HTML5 表单属性">HTML5 表单属性</a></li>
+</ul>
+</div>
+</div>
+</body>
+</html>

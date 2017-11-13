@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div id="maincontent">
+<h1>HTML5 表单属性</h1>
+<div id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="/html5/html_5_form_elements.asp" title="HTML5 表单元素">HTML5 表单元素</a></li>
+<li class="next"><a href="/html5/html5_quiz.asp" title="HTML5 测验">HTML5 测验</a></li>
+</ul>
+</div>
+<div>
+<h2>HTML5 的新的表单属性</h2>
+<p>本章讲解涉及 &lt;form&gt; 和 &lt;input&gt; 元素的新属性。</p>
+<h3>新的 form 属性：</h3>
+<ul>
+<li>autocomplete</li>
+<li>novalidate</li>
+</ul>
+<h3>新的 input 属性：</h3>
+<ul>
+<li>autocomplete</li>
+<li>autofocus</li>
+<li>form</li>
+<li>form overrides (formaction, formenctype, formmethod, formnovalidate, formtarget)</li>
+<li>height 和 width</li>
+<li>list</li>
+<li>min, max 和 step</li>
+<li>multiple</li>
+<li>pattern (regexp)</li>
+<li>placeholder</li>
+<li>required</li>
+</ul>
+</div>
+<div>
+<h2>浏览器支持</h2>
+<table class="dataintable">
+<tr>
+<th style="width:25%;">Input type</th>
+<th style="width:15%;">IE</th>
+<th style="width:15%;">Firefox</th>
+<th style="width:15%;">Opera</th>
+<th style="width:15%;">Chrome</th>
+<th style="width:15%;">Safari</th>
+</tr>
+<tr>
+<td>autocomplete</td>
+<td>8.0</td>
+<td>3.5</td>
+<td>9.5</td>
+<td>3.0</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>autofocus</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td>10.0</td>
+<td>3.0</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>form</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td>9.5</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+</tr>
+<tr>
+<td>form overrides</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td>10.5</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+</tr>
+<tr>
+<td>height and width</td>
+<td>8.0</td>
+<td>3.5</td>
+<td>9.5</td>
+<td>3.0</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>list</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td>9.5</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+</tr>
+<tr>
+<td>min, max and step</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td>9.5</td>
+<td>3.0</td>
+<td><span class="marked">No</span></td>
+</tr>
+<tr>
+<td>multiple</td>
+<td><span class="marked">No</span></td>
+<td>3.5</td>
+<td><span class="marked">No</span></td>
+<td>3.0</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>novalidate</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+</tr>
+<tr>
+<td>pattern</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td>9.5</td>
+<td>3.0</td>
+<td><span class="marked">No</span></td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td>3.0</td>
+<td>3.0</td>
+</tr>
+<tr>
+<td>required</td>
+<td><span class="marked">No</span></td>
+<td><span class="marked">No</span></td>
+<td>9.5</td>
+<td>3.0</td>
+<td><span class="marked">No</span></td>
+</tr>
+</table>
+</div>
+<div>
+<h2>autocomplete 属性</h2>
+<p>autocomplete 属性规定 form 或 input 域应该拥有自动完成功能。</p>
+<p class="note"><span>注释：</span>autocomplete 适用于 &lt;form&gt; 标签，以及以下类型的 &lt;input&gt; 标签：text, search, url, telephone, email, password, datepickers, range 以及 color。</p>
+<p>当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项：</p>
+<h3>实例</h3>
+<pre>
+&lt;form action="demo_form.asp" method="get" <code>autocomplete="on"</code>&gt;
+First name: &lt;input type="text" name="fname" /&gt;&lt;br /&gt;
+Last name: &lt;input type="text" name="lname" /&gt;&lt;br /&gt;
+E-mail: &lt;input type="email" name="email" <code>autocomplete="off"</code> /&gt;&lt;br /&gt;
+&lt;input type="submit" /&gt;
+&lt;/form&gt;
+</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_autocomplete" target="_blank">亲自试一试</a></p>
+<p class="note"><span>注释：</span>在某些浏览器中，您可能需要启用自动完成功能，以使该属性生效。</p>
+</div>
+<div>
+<h2>autofocus 属性</h2>
+<p>autofocus 属性规定在页面加载时，域自动地获得焦点。</p>
+<p class="note"><span>注释：</span>autofocus 属性适用于所有 &lt;input&gt; 标签的类型。</p>
+<h3>实例</h3>
+<pre>User name: &lt;input type="text" name="user_name"  <code>autofocus="autofocus"</code> /&gt;</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_autofocus" target="_blank">亲自试一试</a></p>
+</div>
+<div>
+<h2>form 属性</h2>
+<p>form 属性规定输入域所属的一个或多个表单。</p>
+<p class="note"><span>注释：</span>form 属性适用于所有 &lt;input&gt; 标签的类型。</p>
+<p>form 属性必须引用所属表单的 id：</p>
+<h3>实例</h3>
+<pre>
+&lt;form action="demo_form.asp" method="get" <span class="marked">id="user_form"</span>&gt;
+First name:&lt;input type="text" name="fname" /&gt;
+&lt;input type="submit" /&gt;
+&lt;/form&gt;
+Last name: &lt;input type="text" name="lname" <code>form="user_form"</code> /&gt;
+</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_form" target="_blank">亲自试一试</a></p>
+<p class="note"><span>注释：</span>如需引用一个以上的表单，请使用空格分隔的列表。
+</p></div>
+<div>
+<h2>表单重写属性</h2>
+<p>表单重写属性（form override attributes）允许您重写 form 元素的某些属性设定。</p>
+<p>表单重写属性有：</p>
+<ul>
+<li>formaction - 重写表单的 action 属性</li>
+<li>formenctype - 重写表单的 enctype 属性</li>
+<li>formmethod - 重写表单的 method 属性</li>
+<li>formnovalidate - 重写表单的 novalidate 属性</li>
+<li>formtarget - 重写表单的 target 属性</li>
+</ul>
+<p class="note"><span>注释：</span>表单重写属性适用于以下类型的 &lt;input&gt; 标签：submit 和 image。</p>
+<h3>实例</h3>
+<pre>
+&lt;form action="demo_form.asp" method="get" id="user_form"&gt;
+E-mail: &lt;input type="email" name="userid" /&gt;&lt;br /&gt;
+&lt;input type="submit" value="Submit" /&gt;
+&lt;br /&gt;
+&lt;input type="submit" <code>formaction="demo_admin.asp"</code> value="Submit as admin" /&gt;
+&lt;br /&gt;
+&lt;input type="submit" <code>formnovalidate="true"</code> value="Submit without validation" /&gt;
+&lt;br /&gt;
+&lt;/form&gt;
+</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_override" target="_blank">亲自试一试</a></p>
+<p class="note"><span>注释：</span>这些属性对于创建不同的提交按钮很有帮助。</p>
+</div>
+<div>
+<h2>height 和 width 属性</h2>
+<p>height 和 width 属性规定用于 image 类型的 input 标签的图像高度和宽度。</p>
+<p class="note"><span>注释：</span>height 和 width 属性只适用于 image 类型的 &lt;input&gt; 标签。</p>
+<h3>实例</h3>
+<pre>&lt;input type="image" src="img_submit.gif" <code>width="99"</code> <code>height="99"</code> /&gt;</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_height_width" target="_blank">亲自试一试</a></p>
+</div>
+<div>
+<h2>list 属性</h2>
+<p>list 属性规定输入域的 datalist。datalist 是输入域的选项列表。</p>
+<p class="note"><span>注释：</span>list 属性适用于以下类型的 &lt;input&gt; 标签：text, search, url, telephone, email, date pickers, number, range 以及 color。</p>
+<h3>实例</h3>
+<pre>
+Webpage: &lt;input type="url" <code>list="url_list"</code> name="link" /&gt;
+&lt;datalist <span class="marked">id="url_list"</span>&gt;
+&lt;option label="W3Schools" value="http://www.w3school.com.cn" /&gt;
+&lt;option label="Google" value="http://www.google.com" /&gt;
+&lt;option label="Microsoft" value="http://www.microsoft.com" /&gt;
+&lt;/datalist&gt;
+</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_datalist" target="_blank">亲自试一试</a></p>
+</div>
+<div>
+<h2>min、max 和 step 属性</h2>
+<p>min、max 和 step 属性用于为包含数字或日期的 input 类型规定限定（约束）。</p>
+<p>max 属性规定输入域所允许的最大值。</p>
+<p>min 属性规定输入域所允许的最小值。</p>
+<p>step 属性为输入域规定合法的数字间隔（如果 step="3"，则合法的数是 -3,0,3,6 等）。</p>
+<p class="note"><span>注释：</span>min、max 和 step 属性适用于以下类型的 &lt;input&gt; 标签：date pickers、number 以及 range。</p>
+<p>下面的例子显示一个数字域，该域接受介于 0 到 10 之间的值，且步进为 3（即合法的值为 0、3、6 和 9）：</p>
+<h3>实例</h3>
+<pre>Points: &lt;input type="number" name="points" <code>min="0"</code> <code>max="10"</code> <code>step="3"</code> /&gt;</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_min_max_step" target="_blank">亲自试一试</a></p>
+</div>
+<div>
+<h2>multiple 属性</h2>
+<p>multiple 属性规定输入域中可选择多个值。</p>
+<p class="note"><span>注释：</span>multiple 属性适用于以下类型的 &lt;input&gt; 标签：email 和 file。</p>
+<h3>实例</h3>
+<pre>Select images: &lt;input type="file" name="img" <code>multiple="multiple"</code> /&gt;</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_multiple" target="_blank">亲自试一试</a></p>
+</div>
+<div>
+<h2>novalidate 属性</h2>
+<p>novalidate 属性规定在提交表单时不应该验证 form 或 input 域。</p>
+<p class="note"><span>注释：</span>novalidate 属性适用于 &lt;form&gt; 以及以下类型的 &lt;input&gt; 标签：text, search, url, telephone, email, password, date pickers, range 以及 color.</p>
+<h3>实例</h3>
+<pre>
+&lt;form action="demo_form.asp" method="get" <code>novalidate="true"</code>&gt;
+E-mail: &lt;input type="email" name="user_email" /&gt;
+&lt;input type="submit" /&gt;
+&lt;/form&gt;
+</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_novalidate" target="_blank">亲自试一试</a></p>
+</div>
+<div>
+<h2>pattern 属性</h2>
+<p>pattern 属性规定用于验证 input 域的模式（pattern）。</p>
+<p>模式（pattern） 是正则表达式。您可以在我们的 <a href="/js/index.asp">JavaScript 教程</a>中学习到有关正则表达式的内容。</p>
+<p class="note"><span>注释：</span>pattern 属性适用于以下类型的 &lt;input&gt; 标签：text, search, url, telephone, email 以及 password。</p>
+<p>下面的例子显示了一个只能包含三个字母的文本域（不含数字及特殊字符）：</p>
+<h3>实例</h3>
+<pre>
+Country code: &lt;input type="text" name="country_code"
+<code>pattern="[A-z]{3}"</code> title="Three letter country code" /&gt;
+</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_pattern" target="_blank">亲自试一试</a></p>
+</div>
+<div>
+<h2>placeholder 属性</h2>
+<p>placeholder 属性提供一种提示（hint），描述输入域所期待的值。</p>
+<p class="note"><span>注释：</span>placeholder 属性适用于以下类型的 &lt;input&gt; 标签：text, search, url, telephone, email 以及 password。</p>
+<p>提示（hint）会在输入域为空时显示出现，会在输入域获得焦点时消失：</p>
+<h3>实例</h3>
+<pre>&lt;input type="search" name="user_search"  <code>placeholder="Search W3School"</code> /&gt;</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_placeholder" target="_blank">亲自试一试</a></p>
+</div>
+<div>
+<h2>required 属性</h2>
+<p>required 属性规定必须在提交之前填写输入域（不能为空）。</p>
+<p class="note"><span>注释：</span>required 属性适用于以下类型的 &lt;input&gt; 标签：text, search, url, telephone, email, password, date pickers, number, checkbox, radio 以及 file。</p>
+<h3>实例</h3>
+<pre>Name: &lt;input type="text" name="usr_name" <code>required="required"</code> /&gt;</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_form_required" target="_blank">亲自试一试</a></p>
+</div>
+<div id="bpn">
+<ul class="prenext">
+<li class="pre"><a href="/html5/html_5_form_elements.asp" title="HTML5 表单元素">HTML5 表单元素</a></li>
+<li class="next"><a href="/html5/html5_quiz.asp" title="HTML5 测验">HTML5 测验</a></li>
+</ul>
+</div>
+</div>
+</body>
+</html>

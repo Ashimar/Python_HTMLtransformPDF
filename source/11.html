@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div id="maincontent">
+<h1>HTML 5 应用程序缓存</h1>
+<div id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="/html5/html_5_webstorage.asp" title="HTML5 Web 存储">HTML5 Web 存储</a></li>
+<li class="next"><a href="/html5/html_5_webworkers.asp" title="HTML5 Web Workers">HTML5 Web Workers</a></li>
+</ul>
+</div>
+<div id="intro">
+<p><strong>使用 HTML5，通过创建 cache manifest 文件，可以轻松地创建 web 应用的离线版本。</strong></p>
+</div>
+<div>
+<h2>什么是应用程序缓存（Application Cache）？</h2>
+<p>HTML5 引入了应用程序缓存，这意味着 web 应用可进行缓存，并可在没有因特网连接时进行访问。</p>
+<p>应用程序缓存为应用带来三个优势：</p>
+<ul>
+<li>离线浏览 - 用户可在应用离线时使用它们</li>
+<li>速度 - 已缓存资源加载得更快</li>
+<li>减少服务器负载 - 浏览器将只从服务器下载更新过或更改过的资源。</li>
+</ul>
+</div>
+<div>
+<h2>浏览器支持</h2>
+<p>所有主流浏览器均支持应用程序缓存，除了 Internet Explorer。</p>
+</div>
+<div>
+<h2>HTML5 Cache Manifest 实例</h2>
+<p>下面的例子展示了带有 cache manifest 的 HTML 文档（供离线浏览）：</p>
+<h3>实例</h3>
+<pre>
+&lt;!DOCTYPE HTML&gt;
+&lt;html <code>manifest="demo.appcache"</code>&gt;
+
+&lt;body&gt;
+The content of the document......
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_html_manifest" target="_blank">亲自试一试</a></p>
+</div>
+<div>
+<h2>Cache Manifest 基础</h2>
+<p>如需启用应用程序缓存，请在文档的 &lt;html&gt; 标签中包含 manifest 属性：</p>
+<pre>
+&lt;!DOCTYPE HTML&gt;
+&lt;html manifest="demo.appcache"&gt;
+...
+&lt;/html&gt;
+</pre>
+<p>每个指定了 manifest 的页面在用户对其访问时都会被缓存。如果未指定 manifest 属性，则页面不会被缓存（除非在 manifest 文件中直接指定了该页面）。</p>
+<p>manifest 文件的建议的文件扩展名是：".appcache"。</p>
+<p>请注意，manifest 文件需要配置<em>正确的 MIME-type</em>，即 "text/cache-manifest"。必须在 web 服务器上进行配置。</p>
+</div>
+<div>
+<h2>Manifest 文件</h2>
+<p>manifest 文件是简单的文本文件，它告知浏览器被缓存的内容（以及不缓存的内容）。</p>
+<p>manifest 文件可分为三个部分：</p>
+<ul>
+<li><em>CACHE MANIFEST</em> - 在此标题下列出的文件将在首次下载后进行缓存</li>
+<li><em>NETWORK</em> - 在此标题下列出的文件需要与服务器的连接，且不会被缓存</li>
+<li><em>FALLBACK</em> - 在此标题下列出的文件规定当页面无法访问时的回退页面（比如 404 页面）</li>
+</ul>
+<h3>CACHE MANIFEST</h3>
+<p>第一行，CACHE MANIFEST，是必需的：</p>
+<pre>
+CACHE MANIFEST
+/theme.css
+/logo.gif
+/main.js
+</pre>
+<p>上面的 manifest 文件列出了三个资源：一个 CSS 文件，一个 GIF 图像，以及一个 JavaScript 文件。当 manifest 文件加载后，浏览器会从网站的根目录下载这三个文件。然后，无论用户何时与因特网断开连接，这些资源依然是可用的。</p>
+<h3>NETWORK</h3>
+<p>下面的 NETWORK 小节规定文件 "login.asp" 永远不会被缓存，且离线时是不可用的：</p>
+<pre>
+NETWORK:
+login.asp
+</pre>
+<p>可以使用星号来指示所有其他资源/文件都需要因特网连接：</p>
+<pre>
+NETWORK:
+*
+</pre>
+<h3>FALLBACK</h3>
+<p>下面的 FALLBACK 小节规定如果无法建立因特网连接，则用 "offline.html" 替代 /html5/ 目录中的所有文件：</p>
+<pre>
+FALLBACK:
+/html5/ /404.html
+</pre>
+<p class="note"><span>注释：</span>第一个 URI 是资源，第二个是替补。</p>
+</div>
+<div>
+<h2>更新缓存</h2>
+<p>一旦应用被缓存，它就会保持缓存直到发生下列情况：</p>
+<ul>
+<li>用户清空浏览器缓存</li>
+<li>manifest 文件被修改（参阅下面的提示）</li>
+<li>由程序来更新应用缓存</li>
+</ul>
+<h3>实例 - 完整的 Manifest 文件</h3>
+<pre>
+CACHE MANIFEST
+# 2012-02-21 v1.0.0
+/theme.css
+/logo.gif
+/main.js
+
+NETWORK:
+login.asp
+
+FALLBACK:
+/html5/ /404.html
+</pre>
+<p class="tip"><span>重要的提示：</span>以 "#" 开头的是注释行，但也可满足其他用途。应用的缓存会在其 manifest 文件更改时被更新。如果您编辑了一幅图片，或者修改了一个 JavaScript 函数，这些改变都不会被重新缓存。更新注释行中的日期和版本号是一种使浏览器重新缓存文件的办法。</p>
+</div>
+<div>
+<h2>关于应用程序缓存的注释</h2>
+<p>请留心缓存的内容。</p>
+<p>一旦文件被缓存，则浏览器会继续展示已缓存的版本，即使您修改了服务器上的文件。为了确保浏览器更新缓存，您需要更新 manifest 文件。</p>
+<p class="note"><span>注释：</span>浏览器对缓存数据的容量限制可能不太一样（某些浏览器设置的限制是每个站点 5MB）。</p>
+</div>
+<div id="bpn">
+<ul class="prenext">
+<li class="pre"><a href="/html5/html_5_webstorage.asp" title="HTML5 Web 存储">HTML5 Web 存储</a></li>
+<li class="next"><a href="/html5/html_5_webworkers.asp" title="HTML5 Web Workers">HTML5 Web Workers</a></li>
+</ul>
+</div>
+</div>
+</body>
+</html>

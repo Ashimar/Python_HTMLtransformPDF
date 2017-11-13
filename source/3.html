@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div id="maincontent">
+<h1>HTML 5 Video + DOM</h1>
+<div id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="/html5/html_5_video.asp" title="HTML5 视频">HTML5 视频</a></li>
+<li class="next"><a href="/html5/html_5_audio.asp" title="HTML5 音频">HTML5 音频</a></li>
+</ul>
+</div>
+<div>
+<h2>HTML5 &lt;video&gt; - 使用 DOM 进行控制</h2>
+<p>HTML5 &lt;video&gt; 元素同样拥有方法、属性和事件。</p>
+<p>其中的方法用于播放、暂停以及加载等。其中的属性（比如时长、音量等）可以被读取或设置。其中的 DOM 事件能够通知您，比方说，&lt;video&gt; 元素开始播放、已暂停，已停止，等等。</p>
+<p>下例中简单的方法，向我们演示了如何使用 &lt;video&gt; 元素，读取并设置属性，以及如何调用方法。</p>
+<h3>实例</h3>
+<p>为视频创建简单的播放/暂停以及调整尺寸控件：</p>
+<div class="video_example">
+<br/>
+<div class="btn_ctrl">
+<button onclick="playPause()">播放/暂停</button>
+<button onclick="makeBig()">大</button>
+<button onclick="makeNormal()">中</button>
+<button onclick="makeSmall()">小</button>
+</div>
+<br/><br/>
+<div class="mov_area">
+<video id="video1" width="420">
+<source src="http://www.w3schools.com/html5/mov_bbb.mp4" type="video/mp4"/>
+<source src="/example/html5/mov_bbb.ogg" type="video/ogg"/>
+    Your browser does not support HTML5 video.
+  </video>
+</div>
+</div>
+<script type="text/javascript"> 
+var myVideo=document.getElementById("video1"); 
+
+function playPause()
+{ 
+if (myVideo.paused) 
+  myVideo.play(); 
+else 
+  myVideo.pause(); 
+} 
+
+function makeBig()
+{ 
+myVideo.width=580; 
+} 
+
+function makeSmall()
+{ 
+myVideo.width=320; 
+} 
+
+function makeNormal()
+{ 
+myVideo.width=480; 
+} 
+</script>
+<p>上面的例子调用了两个方法：play() 和 pause()。它同时使用了两个属性：paused 和 width。</p>
+<p class="tiy"><a href="/tiy/t.asp?f=html5_video_dom" target="_blank">亲自试一试</a></p>
+</div>
+<div>
+<h2>HTML5 &lt;video&gt; - 方法、属性以及事件</h2>
+<p>下面列出了大多数浏览器支持的视频方法、属性和事件：</p>
+<table class="dataintable">
+<tr>
+<th style="width:33%;">方法</th>
+<th style="width:33%;">属性</th>
+<th>事件</th>
+</tr>
+<tr>
+<td>play()</td>
+<td>currentSrc</td>
+<td>play</td>
+</tr>
+<tr>
+<td>pause()</td>
+<td>currentTime</td>
+<td>pause</td>
+</tr>
+<tr>
+<td>load()</td>
+<td>videoWidth</td>
+<td>progress</td>
+</tr>
+<tr>
+<td>canPlayType</td>
+<td>videoHeight</td>
+<td>error</td>
+</tr>
+<tr>
+<td> </td>
+<td>duration</td>
+<td>timeupdate</td>
+</tr>
+<tr>
+<td> </td>
+<td>ended</td>
+<td>ended</td>
+</tr>
+<tr>
+<td> </td>
+<td>error</td>
+<td>abort</td>
+</tr>
+<tr>
+<td> </td>
+<td>paused</td>
+<td>empty</td>
+</tr>
+<tr>
+<td> </td>
+<td>muted</td>
+<td>emptied</td>
+</tr>
+<tr>
+<td> </td>
+<td>seeking</td>
+<td>waiting</td>
+</tr>
+<tr>
+<td> </td>
+<td>volume</td>
+<td>loadedmetadata</td>
+</tr>
+<tr>
+<td> </td>
+<td>height</td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td>width</td>
+<td> </td>
+</tr>
+</table>
+<p class="note"><span>注释：</span>在所有属性中，只有 videoWidth 和 videoHeight 属性是立即可用的。在视频的元数据已加载后，其他属性才可用。</p>
+</div>
+<div id="bpn">
+<ul class="prenext">
+<li class="pre"><a href="/html5/html_5_video.asp" title="HTML5 视频">HTML5 视频</a></li>
+<li class="next"><a href="/html5/html_5_audio.asp" title="HTML5 音频">HTML5 音频</a></li>
+</ul>
+</div>
+</div>
+</body>
+</html>

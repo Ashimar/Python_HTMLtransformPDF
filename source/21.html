@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div id="maincontent">
+<h1>HTML 5 视频/音频参考手册</h1>
+<div id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="/tags/html_ref_eventattributes.asp" title="HTML 事件属性">HTML 事件</a></li>
+<li class="next"><a href="/tags/html_ref_canvas.asp" title="HTML Canvas 参考手册">HTML 画布</a></li>
+</ul>
+</div>
+<div id="intro">
+<h2>HTML5 视频和音频的 DOM 参考手册</h2>
+<p>HTML5 DOM 为 &lt;audio&gt; 和 &lt;video&gt; 元素提供了方法、属性和事件。</p>
+<p>这些方法、属性和事件允许您使用 JavaScript 来操作 &lt;audio&gt; 和 &lt;video&gt; 元素。</p>
+</div>
+<div>
+<h2>HTML5 Audio/Video 方法</h2>
+<table class="dataintable">
+<tr>
+<th style="width:30%;">方法</th>
+<th>描述</th>
+</tr>
+<tr>
+<td><a href="/tags/av_met_addtexttrack.asp" title="HTML5 Audio/Video DOM addTextTrack() 方法">addTextTrack()</a></td>
+<td>向音频/视频添加新的文本轨道</td>
+</tr>
+<tr>
+<td><a href="/tags/av_met_canplaytype.asp" title="HTML5 Audio/Video DOM canPlayType() 方法">canPlayType()</a></td>
+<td>检测浏览器是否能播放指定的音频/视频类型</td>
+</tr>
+<tr>
+<td><a href="/tags/av_met_load.asp" title="HTML5 Audio/Video DOM load() 方法">load()</a></td>
+<td>重新加载音频/视频元素</td>
+</tr>
+<tr>
+<td><a href="/tags/av_met_play.asp" title="HTML5 Audio/Video DOM play() 方法">play()</a></td>
+<td>开始播放音频/视频</td>
+</tr>
+<tr>
+<td><a href="/tags/av_met_pause.asp" title="HTML5 Audio/Video DOM pause() 方法">pause()</a></td>
+<td>暂停当前播放的音频/视频</td>
+</tr>
+</table>
+</div>
+<div>
+<h2>HTML5 Audio/Video 属性</h2>
+<table class="dataintable">
+<tr>
+<th style="width:30%;">属性</th>
+<th>描述</th>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_audiotracks.asp" title="HTML5 Audio/Video DOM audioTracks 属性">audioTracks</a></td>
+<td>返回表示可用音轨的 AudioTrackList 对象</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_autoplay.asp" title="HTML5 Audio/Video DOM autoplay 属性">autoplay</a></td>
+<td>设置或返回是否在加载完成后随即播放音频/视频</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_buffered.asp" title="HTML5 Audio/Video DOM buffered 属性">buffered</a></td>
+<td>返回表示音频/视频已缓冲部分的 TimeRanges 对象</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_controller.asp" title="HTML5 Audio/Video DOM controller 属性">controller</a></td>
+<td>返回表示音频/视频当前媒体控制器的 MediaController 对象</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_controls.asp" title="HTML5 Audio/Video DOM controls 属性">controls</a></td>
+<td>设置或返回音频/视频是否显示控件（比如播放/暂停等）</td>
+</tr>
+<tr>
+<td>crossOrigin</td>
+<td>设置或返回音频/视频的 CORS 设置</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_currentsrc.asp" title="HTML5 Audio/Video DOM currentSrc 属性">currentSrc</a></td>
+<td>返回当前音频/视频的 URL</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_currenttime.asp" title="HTML5 Audio/Video DOM currentTime 属性">currentTime</a></td>
+<td>设置或返回音频/视频中的当前播放位置（以秒计）</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_defaultmuted.asp" title="HTML5 Audio/Video DOM defaultMuted 属性">defaultMuted</a></td>
+<td>设置或返回音频/视频默认是否静音</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_defaultplaybackrate.asp" title="HTML5 Audio/Video DOM defaultPlaybackRate 属性">defaultPlaybackRate</a></td>
+<td>设置或返回音频/视频的默认播放速度</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_duration.asp" title="HTML5 Audio/Video DOM duration 属性">duration</a></td>
+<td>返回当前音频/视频的长度（以秒计）</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_ended.asp" title="HTML5 Audio/Video DOM ended 属性">ended</a></td>
+<td>返回音频/视频的播放是否已结束</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_error.asp" title="HTML5 Audio/Video DOM error 属性">error</a></td>
+<td>返回表示音频/视频错误状态的 MediaError 对象</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_loop.asp" title="HTML5 Audio/Video DOM loop 属性">loop</a></td>
+<td>设置或返回音频/视频是否应在结束时重新播放</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_mediagroup.asp" title="HTML5 Audio/Video DOM mediaGroup 属性">mediaGroup</a></td>
+<td>设置或返回音频/视频所属的组合（用于连接多个音频/视频元素）</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_muted.asp" title="HTML5 Audio/Video DOM muted 属性">muted</a></td>
+<td>设置或返回音频/视频是否静音</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_networkstate.asp" title="HTML5 Audio/Video DOM networkState 属性">networkState</a></td>
+<td>返回音频/视频的当前网络状态</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_paused.asp" title="HTML5 Audio/Video DOM paused 属性">paused</a></td>
+<td>设置或返回音频/视频是否暂停</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_playbackrate.asp" title="HTML5 Audio/Video DOM playbackRate 属性">playbackRate</a></td>
+<td>设置或返回音频/视频播放的速度</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_played.asp" title="HTML5 Audio/Video DOM played 属性">played</a></td>
+<td>返回表示音频/视频已播放部分的 TimeRanges 对象</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_preload.asp" title="HTML5 Audio/Video DOM preload 属性">preload</a></td>
+<td>设置或返回音频/视频是否应该在页面加载后进行加载</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_readystate.asp" title="HTML5 Audio/Video DOM readyState 属性">readyState</a></td>
+<td>返回音频/视频当前的就绪状态</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_seekable.asp" title="HTML5 Audio/Video DOM seekable 属性">seekable</a></td>
+<td>返回表示音频/视频可寻址部分的 TimeRanges 对象</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_seeking.asp" title="HTML5 Audio/Video DOM seeking 属性">seeking</a></td>
+<td>返回用户是否正在音频/视频中进行查找</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_src.asp" title="HTML5 Audio/Video DOM src 属性">src</a></td>
+<td>设置或返回音频/视频元素的当前来源</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_startdate.asp" title="HTML5 Audio/Video DOM startDate 属性">startDate</a></td>
+<td>返回表示当前时间偏移的 Date 对象</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_texttracks.asp" title="HTML5 Audio/Video DOM textTracks 属性">textTracks</a></td>
+<td>返回表示可用文本轨道的 TextTrackList 对象</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_videotracks.asp" title="HTML5 Audio/Video DOM videoTracks 属性">videoTracks</a></td>
+<td>返回表示可用视频轨道的 VideoTrackList 对象</td>
+</tr>
+<tr>
+<td><a href="/tags/av_prop_volume.asp" title="HTML5 Audio/Video DOM volume 属性">volume</a></td>
+<td>设置或返回音频/视频的音量</td>
+</tr>
+</table>
+</div>
+<div>
+<h2>HTML5 Audio/Video 事件</h2>
+<table class="dataintable">
+<tr>
+<th style="width:30%;">事件</th>
+<th>描述</th>
+</tr>
+<tr>
+<td>abort</td>
+<td>当音频/视频的加载已放弃时</td>
+</tr>
+<tr>
+<td><a href="/tags/av_event_canplay.asp" title="HTML5 Audio/Video DOM canplay 事件">canplay</a></td>
+<td>当浏览器可以播放音频/视频时</td>
+</tr>
+<tr>
+<td><a href="/tags/av_event_canplaythrough.asp" title="HTML5 Audio/Video DOM canplaythrough 事件">canplaythrough</a></td>
+<td>当浏览器可在不因缓冲而停顿的情况下进行播放时</td>
+</tr>
+<tr>
+<td><a href="/tags/av_event_durationchange.asp" title="HTML5 Audio/Video DOM durationchange 事件">durationchange</a></td>
+<td>当音频/视频的时长已更改时</td>
+</tr>
+<tr>
+<td>emptied</td>
+<td>当目前的播放列表为空时</td>
+</tr>
+<tr>
+<td>ended</td>
+<td>当目前的播放列表已结束时</td>
+</tr>
+<tr>
+<td>error</td>
+<td>当在音频/视频加载期间发生错误时</td>
+</tr>
+<tr>
+<td><a href="/tags/av_event_loadeddata.asp" title="HTML5 Audio/Video DOM loadeddata 事件">loadeddata</a></td>
+<td>当浏览器已加载音频/视频的当前帧时</td>
+</tr>
+<tr>
+<td><a href="/tags/av_event_loadedmetadata.asp" title="HTML5 Audio/Video DOM loadedmetadata 事件">loadedmetadata</a></td>
+<td>当浏览器已加载音频/视频的元数据时</td>
+</tr>
+<tr>
+<td><a href="/tags/av_event_loadstart.asp" title="HTML5 Audio/Video DOM loadstart 事件">loadstart</a></td>
+<td>当浏览器开始查找音频/视频时</td>
+</tr>
+<tr>
+<td>pause</td>
+<td>当音频/视频已暂停时</td>
+</tr>
+<tr>
+<td>play</td>
+<td>当音频/视频已开始或不再暂停时</td>
+</tr>
+<tr>
+<td>playing</td>
+<td>当音频/视频在已因缓冲而暂停或停止后已就绪时</td>
+</tr>
+<tr>
+<td><a href="/tags/av_event_progress.asp" title="HTML5 Audio/Video DOM progress 事件">progress</a></td>
+<td>当浏览器正在下载音频/视频时</td>
+</tr>
+<tr>
+<td>ratechange</td>
+<td>当音频/视频的播放速度已更改时</td>
+</tr>
+<tr>
+<td>seeked</td>
+<td>当用户已移动/跳跃到音频/视频中的新位置时</td>
+</tr>
+<tr>
+<td>seeking</td>
+<td>当用户开始移动/跳跃到音频/视频中的新位置时</td>
+</tr>
+<tr>
+<td>stalled</td>
+<td>当浏览器尝试获取媒体数据，但数据不可用时</td>
+</tr>
+<tr>
+<td>suspend</td>
+<td>当浏览器刻意不获取媒体数据时</td>
+</tr>
+<tr>
+<td>timeupdate</td>
+<td>当目前的播放位置已更改时</td>
+</tr>
+<tr>
+<td>volumechange</td>
+<td>当音量已更改时</td>
+</tr>
+<tr>
+<td>waiting</td>
+<td>当视频由于需要缓冲下一帧而停止</td>
+</tr>
+</table>
+</div>
+<div id="bpn">
+<ul class="prenext">
+<li class="pre"><a href="/tags/html_ref_eventattributes.asp" title="HTML 事件属性">HTML 事件</a></li>
+<li class="next"><a href="/tags/html_ref_canvas.asp" title="HTML Canvas 参考手册">HTML 画布</a></li>
+</ul>
+</div>
+<div style="background-color:#fcfdf8; padding:0;">
+<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- W3School 正文底部广告位 -->
+<ins class="adsbygoogle" data-ad-client="ca-pub-3381531532877742" data-ad-slot="9384069314" style="display:inline-block;width:800px;height:250px"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+</body>
+</html>
